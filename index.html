@@ -16,9 +16,10 @@ canvas.rubbing{cursor:grabbing}
 #title{font-size:26px;font-weight:700;letter-spacing:8px;margin-top:6px;text-transform:uppercase;text-shadow:0 2px 24px rgba(232,179,74,.35)}
 #luck{position:fixed;top:18px;right:22px;font-size:12px;letter-spacing:2px;color:#e8b34a;user-select:none}
 #luck b{color:#f6ead6;font-size:16px}
-#hint{position:fixed;bottom:16px;left:0;right:0;text-align:center;font-size:11px;letter-spacing:2px;color:#8a7a5e;user-select:none}
-#foot{position:fixed;bottom:38px;left:0;right:0;text-align:center;font-size:10px;letter-spacing:3px;color:#6a5c44;user-select:none}
-#foot a{color:#e8b34a;text-decoration:none;border-bottom:1px solid rgba(232,179,74,.35)}
+#footwrap{position:fixed;bottom:12px;left:0;right:0;text-align:center;user-select:none;line-height:1.9;padding:0 14px;box-sizing:border-box;pointer-events:none}
+#foot{font-size:10px;letter-spacing:2px;color:#6a5c44}
+#foot a{color:#e8b34a;text-decoration:none;border-bottom:1px solid rgba(232,179,74,.35);pointer-events:auto}
+#hint{font-size:11px;letter-spacing:2px;color:#8a7a5e;margin-top:2px}
 @media (max-width:640px){#title{font-size:18px;letter-spacing:5px}}
 </style>
 </head>
@@ -26,8 +27,8 @@ canvas.rubbing{cursor:grabbing}
 <div id="stage"><canvas id="c"></canvas></div>
 <div id="hud"><div id="brand">Lucky Cat Robotics</div><div id="title">Rub The Lamp</div></div>
 <div id="luck">WISHES <b id="luckN">0</b></div>
-<div id="foot">the lamp edition &middot; same brain, second body &middot; <a href="https://jacobegarcia.github.io/luckycat/">luckycat</a></div>
-<div id="hint">drag to rub the lamp &middot; first wish of the day is today's wish &middot; s = save card</div>
+<div id="footwrap"><div id="foot">the lamp edition &middot; same brain, second body &middot; <a href="https://jacobegarcia.github.io/luckycat/">luckycat</a></div>
+<div id="hint">drag to rub the lamp &middot; first wish of the day is today's wish &middot; s = save card</div></div>
 <script>
 'use strict';
 const Q=new URLSearchParams(location.search),SHOT=Q.has('shot');
